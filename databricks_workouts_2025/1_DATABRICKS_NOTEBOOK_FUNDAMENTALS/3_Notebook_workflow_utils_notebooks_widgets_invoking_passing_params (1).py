@@ -39,28 +39,28 @@ dbutils.fs.help()
 
 print("lets learn all fs commands options...")
 print("copying")
-dbutils.fs.cp("/Volumes/workspace/default/volumewd36/sample_healthcare_patients.csv","/Volumes/workspace/default/volumewd36/sample_healthcare_patients1.csv")
+dbutils.fs.cp("/Volumes/workspace/default/volumewd36/sample_data.csv","/Volumes/workspace/default/volumewd36/sample_data1.csv")
 print("head of 10 rows")
-print(dbutils.fs.head("/Volumes/workspace/default/volumewd36/sample_healthcare_patients1.csv"))
+print(dbutils.fs.head("/Volumes/workspace/default/volumewd36/sample_data1.csv"))
 print("listing")
 dbutils.fs.ls("/Volumes/workspace/default/volumewd36/")
 print("make directory")
 dbutils.fs.mkdirs("/Volumes/workspace/default/volumewd36/healthcare/")
 print("move")
-dbutils.fs.mv("/Volumes/workspace/default/volumewd36/sample_healthcare_patients1.csv","/Volumes/workspace/default/volumewd36/healthcare/sample_healthcare_patients1.csv")
+dbutils.fs.mv("/Volumes/workspace/default/volumewd36/sample_data1.csv","/Volumes/workspace/default/volumewd36/healthcare/sample_data1.csv")
 dbutils.fs.ls("/Volumes/workspace/default/volumewd36/healthcare/")
-dbutils.fs.cp("/Volumes/workspace/default/volumewd36/sample_healthcare_patients.csv","/Volumes/workspace/default/volumewd36/sample_healthcare_patients1.csv")
+dbutils.fs.cp("/Volumes/workspace/default/volumewd36/sample_data.csv","/Volumes/workspace/default/volumewd36/sample_data1.csv")
 print("put to write some data into a file")
 
 # COMMAND ----------
 
 print("try below command without the 3rd argument of true, you will find the dbfs-> hadoop -> spark -> s3 bucket")
-#dbutils.fs.put("dbfs:///Volumes/workspace/default/volumewd36/sample_healthcare_patients1.csv","put something",False)
-print(dbutils.fs.head("/Volumes/workspace/default/volumewd36/sample_healthcare_patients1.csv"))
-dbutils.fs.put("dbfs:///Volumes/workspace/default/volumewd36/sample_healthcare_patients1.csv","put something",True)
+#dbutils.fs.put("dbfs:///Volumes/workspace/default/volumewd36/sample_data1.csv","put something",False)
+print(dbutils.fs.head("/Volumes/workspace/default/volumewd36/sample_data1.csv"))
+dbutils.fs.put("/Volumes/workspace/default/volumewd36/sample_data1.csv","put something",True)
 print("see the data in the file")
-print(dbutils.fs.head("/Volumes/workspace/default/volumewd36/sample_healthcare_patients1.csv"))
-dbutils.fs.rm("/Volumes/workspace/default/volumewd36/healthcare/sample_healthcare_patients1.csv")
+print(dbutils.fs.head("/Volumes/workspace/default/volumewd36/sample_data1.csv"))
+dbutils.fs.rm("/Volumes/workspace/default/volumewd36/sample_data1.csv")
 
 # COMMAND ----------
 
@@ -168,20 +168,20 @@ print(dict_all_widgets)
 
 # COMMAND ----------
 
-child_return_value=dbutils.notebook.run("/Workspace/Users/infoblisstech@gmail.com/databricks-code-repo/databricks_workouts_2025/1_DATABRICKS_NOTEBOOK_FUNDAMENTALS/4_child_notebook", 180,{"table_name":"cities1"})
+child_return_value=dbutils.notebook.run("/Workspace/Users/pakkirmohamad25@gmail.com/databricks-code-repo-irfan/databricks_workouts_2025/1_DATABRICKS_NOTEBOOK_FUNDAMENTALS/4_child_notebook", 180,{"table_name":"cities1"})
 
 # COMMAND ----------
 
 if True:
-    dbutils.notebook.run("/Workspace/Users/infoblisstech@gmail.com/databricks-code-repo/databricks_workouts_2025/1_DATABRICKS_NOTEBOOK_FUNDAMENTALS/4_child_notebook",600)
+    dbutils.notebook.run("/Workspace/Users/pakkirmohamad25@gmail.com/databricks-code-repo-irfan/databricks_workouts_2025/1_DATABRICKS_NOTEBOOK_FUNDAMENTALS/4_child_notebook",600)
 else:
-    dbutils.notebook.run("/Workspace/Users/infoblisstech@gmail.com/databricks-code-repo/databricks_workouts_2025/1_DATABRICKS_NOTEBOOK_FUNDAMENTALS/4_child_notebook",300)
+    dbutils.notebook.run("/Workspace/Users/pakkirmohamad25@gmail.com/databricks-code-repo-irfan/databricks_workouts_2025/1_DATABRICKS_NOTEBOOK_FUNDAMENTALS/4_child_notebook",300)
 
 # COMMAND ----------
 
 import time
 for i in range(13):
-    dbutils.notebook.run("/Workspace/Users/infoblisstech@gmail.com/databricks-code-repo/databricks_workouts_2025/1_DATABRICKS_NOTEBOOK_FUNDAMENTALS/4_child_notebook",300)
+    dbutils.notebook.run("/Workspace/Users/pakkirmohamad25@gmail.com/databricks-code-repo-irfan/databricks_workouts_2025/1_DATABRICKS_NOTEBOOK_FUNDAMENTALS/4_child_notebook",300)
     time.sleep(10)
 
 # COMMAND ----------
